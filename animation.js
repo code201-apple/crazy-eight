@@ -1,8 +1,3 @@
-
-// Crystal Ball source material: https://codepen.io/Pixmy/pen/BwVgVR or https://dribbble.com/shots/2706997-The-Future (primarily CSS)
-// Random Character Shuffle Effect for Text: https://codemyui.com/rainbow-colors-random-character-shuffle-effect-text/
-
-
 function WordShuffler(holder,opt){
     let that = this;
     let time = 0;
