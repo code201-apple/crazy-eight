@@ -107,5 +107,4 @@ window.addEventListener('shake', shakeHappened, false);
 function shakeHappened(){
     const answer = document.getElementById('answer'); // target HTML element to which click handler returns answer
     answer.textContent = eightBall.randomAnswer();
-
 }
