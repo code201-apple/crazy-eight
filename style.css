@@ -1,10 +1,9 @@
 body{
-    background-color: black;
     color: white;
     outline: none;   
 }
 
-a{
+a {
     color: #ee88fd;
     outline: none;
 }
@@ -213,4 +212,22 @@ img {
     width: 35%;
     height: 35px;
 
+}
+#footer-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer-nav a {
+    color: white;
+    font-size: .75em;
+
+}
+
+#disclaimer p {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: .75em;
 }
