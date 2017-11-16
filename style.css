@@ -23,6 +23,11 @@ a{
     display: flex;
     list-style: none;
     outline: none;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0;
+    width: 60%;
 }
 
 #about-link{
@@ -121,7 +126,7 @@ a{
     border-radius: 12px;
     border-style: none;
     height: 40px;
-    width: 38%;
+    width: 38.5%;
     background-color: #ee88fd;
     outline: none;
     font-family: monospace;
@@ -151,12 +156,15 @@ a{
     text-align: center;
     font-size: 4rem;
     font-family: monospace;
+    text-shadow: -5px 5px 5px #fcefff;
+    color: #ee88fd
 }
 
 .profiles{
     width: 80%;
     height: 20%;
     margin: 0 auto;
+    text-align: center
 }
 
 img {
@@ -164,6 +172,7 @@ img {
     width: 200px;
     height: auto;
     margin-right: 20px;
+
 }
 
 #aboutLinksTop{
