@@ -15,6 +15,8 @@ a{
     font-family: monospace;
     outline: none;
     margin: 50px 5%;
+    text-shadow: -5px 5px 5px #fcefff;
+    color: #ee88fd;
 }
 
 #custom-links{
@@ -32,6 +34,7 @@ a{
     /* background image from: https://wallpapercave.com/wp/yynPaPg.jpg */
     background-image: url('images/wolves.jpg');  
     background-size: cover;
+    background-repeat: no-repeat;
     
 }
 #userInput{
@@ -58,7 +61,7 @@ a{
     outline: none;
     font-family: monospace;
     font-size: 1em;
-    background-color: #ee88fd;
+    background-color: #fcefff;
     text-align: center;
     color: black;
     border: none;
@@ -72,9 +75,8 @@ a{
 
 .inputBox:focus{
     opacity: 1;
-    /* background-color: black; */
     color: black;
-    font-size: 15pt;
+    font-size: 1em;
     text-align: center;
 }
 
@@ -142,7 +144,7 @@ a{
     margin: 0 auto;
     font-family: monospace;
     font-size: 13pt;
-    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #aboutHeader{
@@ -152,9 +154,9 @@ a{
 }
 
 .profiles{
+    width: 80%;
     height: 20%;
-    margin-top: 50px;
-    /* overflow: auto; */
+    margin: 0 auto;
 }
 
 img {
