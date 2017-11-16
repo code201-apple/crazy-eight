@@ -1,5 +1,5 @@
 'use strict';
-const answersArray = ['yes', 'no', 'absolutely', 'possibly', 'highly unlikly', 'who knows'];
+const answersArray = ['yes', 'It is certain', 'It is decidedly so', 'Without a doubt', 'Yes definitely', 'You may rely on it', 'As I see it, yes', 'Most likely', 'Outlook good', 'Signs point to yes', 'Reply is hazy, try again', 'Ask again later', 'Better not tell you now', 'Cannot predict now', 'Concentrate and try again', 'Don\'t count on it', 'My reply is no', 'My sources say no', 'Outlook is not so good', 'Very doubtful'];
 const userAnswers = [];
 
 const eightBall = new FortuneTell('eightBall');
@@ -76,16 +76,23 @@ if(form) {
     }, false);
 }
 
-const eightBallImage = document.getElementById('eightBallImage'); // target HTML element with event listener
-if (eightBallImage) {
-    eightBallImage.addEventListener('click', clickHandler, false);
+// const shuffler = document.getElementById('shuffler'); // target HTML element with event listener
+if (shuffler) {
+    shuffler.addEventListener('click', clickHandler, false);
 }// click handler is a function; event listener takes click handler function as a parameter
 
 function clickHandler() {
     const answer = document.getElementById('answer'); // target HTML element to which click handler returns answer
     answer.textContent = eightBall.randomAnswer();
+    let headText = new WordShuffler(answer,{
+        textColor : '#fff',
+        timeOffset : 5, // changes duration of shuffle
+        mixCapital : true,
+        mixSpecialCharacters : true
+    });
+    headText.restart();
+    buttonText.restart();   
 }
-
 
 //Shake detection and code
 const myShakeEvent = new Shake ({
@@ -100,5 +107,12 @@ window.addEventListener('shake', shakeHappened, false);
 function shakeHappened(){
     const answer = document.getElementById('answer'); // target HTML element to which click handler returns answer
     answer.textContent = eightBall.randomAnswer();
-
+    let headText = new WordShuffler(answer,{
+        textColor : '#fff',
+        timeOffset : 5, // changes duration of shuffle
+        mixCapital : true,
+        mixSpecialCharacters : true
+    });
+    headText.restart();
+    buttonText.restart();
 }

@@ -1,3 +1,7 @@
+##Source Code
+Crystal Ball source material: https://codepen.io/Pixmy/pen/BwVgVR or https://dribbble.com/shots/2706997-The-Future (primarily CSS)
+Random Character Shuffle Effect for Text: https://codemyui.com/rainbow-colors-random-character-shuffle-effect-text/
+
 ## Team Name & Members
 The Fourtune Tellers—Carmen Perezchica, Jack Lomax, Charlie Heiner, Alissa Beddow
 
