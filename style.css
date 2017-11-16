@@ -200,6 +200,7 @@ img {
     margin-left: 38%;
     width: 250px;
     height: auto;
+    z-index: 100000;
 } 
 
 #animation-form {
@@ -208,8 +209,8 @@ img {
     font-size: .75em;
     display: block;
     margin: 10px auto;
+    padding: 15px 25px;
     text-align: center;
-    width: 35%;
     height: 35px;
 
 }
@@ -219,13 +220,12 @@ img {
 }
 
 #footer-nav a {
-    color: white;
+    color: #a30ae3;
     font-size: .75em;
-
 }
 
 #disclaimer p {
-    color: #000;
+    color: #222;
     display: flex;
     justify-content: center;
     text-align: center;
