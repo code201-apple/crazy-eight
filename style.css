@@ -160,6 +160,12 @@ a {
     color: #ee88fd
 }
 
+#aboutSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .profiles{
     width: 80%;
     height: 20%;
@@ -225,7 +231,7 @@ img {
     font-size: .75em;
 }
 
-#disclaimer p {
+#disclaimer  {
     color: #222;
     display: flex;
     justify-content: center;
