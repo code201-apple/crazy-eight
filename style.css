@@ -202,13 +202,40 @@ img {
 }
 
 /* INDEX */
+/* #logo-div {
+    display: flex;
+    justify-content: space-around;
+    }
+    
 #logo {
-    margin-top: -250px;
+    margin-top: -120px;
+    margin-bottom: 20px;
+    /* margin-left: 38%; /
+    / width: 250px; */
+    /* height: auto;
+    z-index: 100000;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */ 
+#logo {
+    margin-top: -16%;
     margin-left: 38%;
     width: 250px;
     height: auto;
     z-index: 100000;
 } 
+
+@media (max-width: 600px ){
+    #logo{
+        min-width: 200px;
+        margin-top: -20%;
+        margin-left: 21%;
+        width: 20%;
+        height: auto;
+        z-index: 100000;
+    }
+}
 
 #animation-form {
     font-family: monospace;
