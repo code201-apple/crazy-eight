@@ -1,6 +1,6 @@
 function WordShuffler(holder,opt){
-    let that = this;
-    let time = 0;
+    const that = this;
+    const time = 0;
     this.now;
     this.then = Date.now();
 
@@ -12,7 +12,7 @@ function WordShuffler(holder,opt){
     this.currentCharacter = 0;
     this.currentWordLength = 0;
 
-    let options = {
+    const options = {
         fps : 10,
         timeOffset : 5,
         textColor : '#000',
@@ -32,8 +32,8 @@ function WordShuffler(holder,opt){
     };
 
     if(typeof opt != 'undefined'){
-        for(key in opt){
-            options[key] = opt[key];
+        for(key in opt){ // eslint-disable-line
+            options[key] = opt[key]; // eslint-disable-line
         }
     }
 
@@ -58,7 +58,7 @@ function WordShuffler(holder,opt){
     }
 
     this.getRandomColor = function () {
-        let randNum = Math.floor( Math.random() * this.colors.length );
+        const randNum = Math.floor( Math.random() * this.colors.length );
         return this.colors[randNum];
     };
 
@@ -83,9 +83,9 @@ function WordShuffler(holder,opt){
         if(characterToReplace == ' '){
             return ' ';
         }
-        let randNum = Math.floor(Math.random() * this.chars.length);
-        let lowChoice =  -.5 + Math.random();
-        let picketCharacter = this.chars[randNum];
+        const randNum = Math.floor(Math.random() * this.chars.length);
+        const lowChoice =  -.5 + Math.random();
+        const picketCharacter = this.chars[randNum];
         let choosen = picketCharacter.toLowerCase();
         if(this.mixCapital){
             choosen = lowChoice < 0 ? picketCharacter.toLowerCase() : picketCharacter;
@@ -102,13 +102,13 @@ function WordShuffler(holder,opt){
     };
 
     this.generateSingleCharacter = function (color,character) {
-        let span = document.createElement('span');
+        const span = document.createElement('span');
         span.style.color = color;
         span.innerHTML = character;
         return span;
     };
 
-    this.updateCharacter = function (time) {
+    this.updateCharacter = function (time) { // eslint-disable-line
 
         this.now = Date.now();
         this.delta = this.now - this.then;
@@ -118,7 +118,7 @@ function WordShuffler(holder,opt){
         if (this.delta > this.interval) {
             this.currentTimeOffset++;
 
-            let word = [];
+            const word = [];
 
             if(this.currentTimeOffset === this.timeOffset && this.currentCharacter !== this.currentWordLength){
                 this.currentCharacter++;
@@ -134,17 +134,17 @@ function WordShuffler(holder,opt){
 
 
             if(that.useCanvas){
-                c.clearRect(0,0,stage.x * stage.dpr , stage.y * stage.dpr);
-                c.font = that.fontSize + ' sans-serif';
+                c.clearRect(0,0,stage.x * stage.dpr , stage.y * stage.dpr); // eslint-disable-line
+                c.font = that.fontSize + ' sans-serif'; // eslint-disable-line
                 let spacing = 0;
                 word.forEach(function (w,index) {
                     if(index > that.currentCharacter){
-                        c.fillStyle = that.getRandomColor();
+                        c.fillStyle = that.getRandomColor(); // eslint-disable-line
                     }else{
-                        c.fillStyle = that.textColor;
+                        c.fillStyle = that.textColor; // eslint-disable-line
                     }
-                    c.fillText(w, that.position.x + spacing, that.position.y);
-                    spacing += c.measureText(w).width;
+                    c.fillText(w, that.position.x + spacing, that.position.y); // eslint-disable-line
+                    spacing += c.measureText(w).width; // eslint-disable-line
                 });
             }else{
 
@@ -187,24 +187,12 @@ function WordShuffler(holder,opt){
 }
 
 
-let answer = document.getElementById('answer');
-// let text = document.getElementById('text');
-let shuffler = document.getElementById('shuffler');
+let answer = document.getElementById('answer'); // eslint-disable-line
+let shuffler = document.getElementById('shuffler'); // eslint-disable-line
 
 
-
-// var pText = new WordShuffler(text,{
-//   textColor : '#fff',
-//   timeOffset : 2
-// });
-
-let buttonText = new WordShuffler(shuffler,{
+let buttonText = new WordShuffler(shuffler,{ // eslint-disable-line
     textColor : 'white',
     timeOffset : 10
 });
 
-
-// shuffler.addEventListener('click',function () {
-//     // headText.restart();
-//     // pText.restart();
-// });
